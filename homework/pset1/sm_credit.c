@@ -1,3 +1,4 @@
+// Meaki Johoa Souley.     Kagame cohort.
 // Check the validity of a given credit card of three different providers: American Express, MasterCard and Visa
 
 #include <cs50.h>
@@ -51,7 +52,7 @@ int main(void)
                 sum1 = ccard * 2;
             }
 
-            if (i % 2 != 0)
+            else if (i % 2 != 0)
 
             {
 
@@ -59,7 +60,7 @@ int main(void)
                 sum1 = ccard * 1;
             }
 
-            if (sum1 > 9)
+            else if (sum1 > 9)
 
             {
                 sum1 = sum1 - 9;
@@ -73,7 +74,7 @@ int main(void)
         if (sum % 10 == 0)
         {
             // Divid the credit card long long number in order to get a suit of two numbers
-            while (credit > 200)
+            while (credit > 100)
 
             {
                 credit = credit / 10;
@@ -88,28 +89,40 @@ int main(void)
             }
 
             // check the card information of the card by looking at the lengh and the first two digit
-            if ((counter == 15) && (n == 34 || n == 37))
+            else if ((counter == 15) && (n == 34 || n == 37))
 
             {
                 printf("AMEX\n");
             }
 
             // check the card information of the card by looking at the lengh and the first two digit
-            if ((counter == 16) && (n == 52 || n == 53 || n == 54 || n == 55))
+            else if ((counter == 16) && (n == 52 || n == 53 || n == 54 || n == 55))
 
             {
                 printf("MasterCard\n");
             }
 
+            else
+             {
+                     // Print out the invalidity of the credit card after the application of      algorithm
+                     printf("INVALID\n");
+             }
 
         }
-
-        else
+         else
 
         {
             // Print out the invalidity of the credit card after the application of      algorithm
             printf("INVALID\n");
         }
+
+
     }
+    else
+
+        {
+            // Print out the invalidity of the credit card after the application of      algorithm
+            printf("INVALID\n");
+        }
 
 }
